@@ -1,0 +1,35 @@
+@model asp_net_mvc.Models.Contato
+
+@{
+    ViewData["Title"] = "Deletar contato";
+}
+
+<h1>Deseja realmente deletar este contato?</h1>
+
+<hr/>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Deletar">
+            <div class="form-group">
+                <label asp-for="Nome" class="control-label"></label>
+                <input disabled asp-for="Nome" class="form-control"/>
+            </div>
+            <div class="form-group">
+                <label asp-for="Telefone" class="control-label"></label>
+                <input disabled asp-for="Telefone" class="form-control"/>
+            </div>
+            <br>
+            <div class="form-group">
+                <label asp-for="Ativo" class="control-label"></label>
+                <input disabled type="checkbox" asp-for="Ativo" class="form-check-input"/>
+            </div>
+            <br>
+            <div class="form-group">
+                <input type="submit" value="Deletar" class="btn btn-danger" />            
+                <a asp-action="Index" class="btn btn-secondary">Voltar</a>
+            </div>
+        </form>
+    </div>
+</div>
+
