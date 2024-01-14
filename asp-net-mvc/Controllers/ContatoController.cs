@@ -66,6 +66,15 @@ namespace asp_net_mvc.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        public IActionResult Detalhes(int id)
+        {
+            var contato = _context.Contatos.Find(id);
+
+            if(contato == null)
+                return NotFound();
+
+            return View(contato);
+        }
 
     }
 }
